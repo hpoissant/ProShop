@@ -79,4 +79,5 @@ const products = [
   },
 ]
 
+//TODO: change this from commonJS to ECMAScript syntax "export default products"
 module.exports = products

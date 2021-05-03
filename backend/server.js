@@ -2,6 +2,15 @@ const express = require('express')
 const dotenv = require('dotenv')
 const products = require('./data/products')
 
+/*
+TODO: update NodeJS to 14 to use ECMAScripts import syntax on serverside
+import express from 'express'
+import dotenv from 'dotenv'
+import products from './data/products'
+
+Also add '"type": "module",' to package.js below main
+*/
+
 const app = express()
 
 dotenv.config()
