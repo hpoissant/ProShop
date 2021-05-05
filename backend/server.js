@@ -1,6 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv')
+const connectDB = require('./config/db')
 const products = require('./data/products')
+const { connect } = require('mongoose')
 
 /*
 TODO: update NodeJS to 14 to use ECMAScripts import syntax on serverside
@@ -14,6 +16,8 @@ Also add '"type": "module",' to package.js below main
 const app = express()
 
 dotenv.config()
+
+connectDB()
 
 app.get('/', (req, res) => {
   res.send('API is running...')
