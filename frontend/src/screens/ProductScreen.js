@@ -11,8 +11,8 @@ const ProductScreen = ({ history, match }) => {
   // this is a hook that handles qty
   // qty is the name stored in state
   // setQty here updates qty
-  // useState here sets a default value of 0
-  const [qty, setQty] = useState(0)
+  // useState here sets a default value of 1
+  const [qty, setQty] = useState(1)
 
   const dispatch = useDispatch()
 
