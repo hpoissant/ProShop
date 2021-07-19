@@ -4,7 +4,8 @@ const colors = require('colors')
 const { notFound, errorHandler } = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 
-const productRoutes = require('./routes/productRoutes')
+import productRoutes from './routes/productRoutes'
+import userRoutes from './routes/userRoutes'
 
 /*
 TODO: update NodeJS to 14 to use ECMAScripts import syntax on serverside
@@ -17,6 +18,8 @@ Also add '"type": "module",' to package.js below main
 
 const app = express()
 
+app.use(express.json())
+
 dotenv.config()
 
 connectDB()
@@ -26,6 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 app.use(notFound)
 app.use(errorHandler)
